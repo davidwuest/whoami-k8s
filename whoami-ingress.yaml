@@ -7,4 +7,11 @@ spec:
   rules:
     - host: whoami.internal
       http:
-        paths: []
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: whoami
+                port:
+                  number: 80
