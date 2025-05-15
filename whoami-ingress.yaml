@@ -5,19 +5,6 @@ metadata:
 
 spec:
   rules:
-    - http:
-        paths:
-          - path: /bar
-            pathType: Prefix
-            backend:
-              service:
-                name: whoami
-                port:
-                  number: 5678
-          - path: /foo
-            pathType: Prefix
-            backend:
-              service:
-                name: whoami
-                port:
-                  number: 5678
+    - host: whoami.internal
+      http:
+        paths: []
