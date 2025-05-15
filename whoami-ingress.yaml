@@ -15,3 +15,7 @@ spec:
                 name: whoami
                 port:
                   number: 5678
+  tls:
+    - hosts:
+        - whoami.internal
+      secretName: dw-net-ca
