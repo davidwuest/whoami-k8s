@@ -5,6 +5,8 @@ metadata:
   name: whoami
   annotations:
     traefik.ingress.kubernetes.io/router.entrypoints: websecure
+    traefik.ingress.kubernetes.io/router.tls: "true"
+    traefik.ingress.kubernetes.io/router.tls.certresolver: dw-net-ca
 
 spec:
   rules:
