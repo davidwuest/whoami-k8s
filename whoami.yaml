@@ -76,13 +76,8 @@ spec:
   issuerRef:
     name: dw-net-ca
     kind: ClusterIssuer
-  commonName: whoami.internal
   dnsNames:
     - whoami.internal
   duration: 24h # 90 days
   renewBefore: 23h # 15 days
-  usages:
-    - digital signature
-    - key encipherment
-    - server auth
-    - client auth
+ 
