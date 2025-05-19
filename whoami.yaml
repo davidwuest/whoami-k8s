@@ -67,18 +67,18 @@ spec:
   selector:
     app: whoami
 ---
-# apiVersion: v1
-# kind: Certificate
-# metadata:
-#   name: dw-net-ca-cert
-#   namespace: cert-manager
-# spec:
-#   secretName: dw-net-ca-cert
-#   issuerRef:
-#     name: dw-net-ca
-#     kind: ClusterIssuer
-#   dnsNames:
-#     - whoami.internal
-#   duration: 24h # 90 days
-#   renewBefore: 23h # 15 days
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: dw-net-ca-cert
+  namespace: cert-manager
+spec:
+  secretName: dw-net-ca-cert
+  issuerRef:
+    name: dw-net-ca
+    kind: ClusterIssuer
+  dnsNames:
+    - whoami.internal
+  duration: 24h # 24 hours
+  renewBefore: 23h # 23 hours
  
