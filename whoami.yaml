@@ -36,7 +36,6 @@ metadata:
     traefik.ingress.kubernetes.io/router.tls: "true"
     traefik.ingress.kubernetes.io/router.tls.certresolver: dw-net-ca
     cert-manager.io/issuer: dw-net-ca
-
 spec:
   rules:
   - host: whoami.internal
@@ -50,7 +49,9 @@ spec:
             port:
               number: 5678
   tls:
-  - secretName: dw-net-ca-cert # <=== Use the name defined in Certificate resource.
+  - hosts:
+    - whoami.internal
+    secretName: dw-net-ca-cert # <=== Use the name defined in Certificate resource.
 ---
 apiVersion: v1
 kind: Service
