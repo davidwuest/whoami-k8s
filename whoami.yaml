@@ -35,7 +35,7 @@ metadata:
     traefik.ingress.kubernetes.io/router.entrypoints: websecure
     traefik.ingress.kubernetes.io/router.tls: "true"
     traefik.ingress.kubernetes.io/router.tls.certresolver: dw-net-ca
-    cert-manager.io/issuer: dw-net-ca
+    cert-manager.io/cluster-issuer: dw-net-ca
 spec:
   rules:
   - host: whoami.internal
