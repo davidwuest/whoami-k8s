@@ -69,7 +69,7 @@ spec:
 apiVersion: v1
 kind: Certificate
 metadata:
-  name: dw-net-ca-cert
+  name: dw-net-ca
   namespace: cert-manager
 spec:
   secretName: dw-net-ca-cert
