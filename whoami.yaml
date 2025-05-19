@@ -81,4 +81,8 @@ spec:
     - whoami.internal
   duration: 24h # 24 hours
   renewBefore: 23h # 23 hours
+  privateKey:
+    algorithm: RSA        # or ECDSA – match what you want
+    size: 2048            # match your requirements
+    rotationPolicy: Always
  
